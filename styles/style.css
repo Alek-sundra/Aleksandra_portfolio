@@ -27,8 +27,8 @@ button {
 
 .header {
   margin-block: 100px;
-  padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  padding-block-end: 25px;
+  padding-block-start: clamp(3.125rem, 2.0246rem + 4.6948vw, 6.25rem);
+  padding-block-end: 50px;
   font-family: var(--font-family-titles, "PressStart2P", fantasy);
   line-height: 1;
   text-align: center;
@@ -36,14 +36,16 @@ button {
 
 .header__logo-link {
   font-weight: 400;
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-size: clamp(1.125rem, 0.7729rem + 1.5023vw, 2.125rem);
 }
 
 .header__title {
   margin-block: 20px 25px;
   font-weight: 400;
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  text-transform: uppercase;
+  font-size: clamp(1rem, 0.912rem + 0.3756vw, 1.25rem);
+  @media (width>=1140px) {
+    text-transform: uppercase;
+  }
 }
 
 .theme-menu__list {
@@ -59,8 +61,11 @@ button {
 
 .theme-menu__button {
   position: relative;
-  text-transform: uppercase;
   transition: color 0.3s;
+
+  @media (width>=1140px) {
+    text-transform: uppercase;
+  }
 }
 
 .theme-menu__button:disabled {
@@ -132,12 +137,13 @@ button {
 .card__watermark {
   position: absolute;
   z-index: 2;
-  opacity: 0.5;
+  color: var(--background-color);
+
   font-family: var(--font-family-titles, "PressStart2P", fantasy);
   font-weight: 400;
   font-size: 14px;
-  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
-    1px 0 var(--background-color), 0 -1px var(--background-color);
+  text-shadow: -2px 0 var(--text-color), 0 2px var(--text-color),
+    2px 0 var(--text-color), 0 -2px var(--text-color);
   inset-inline-end: 13px;
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
@@ -159,6 +165,10 @@ button {
   filter: saturate(300%);
 }
 
+.image_filters {
+  filter: saturate(150%) brightness(150%);
+}
+
 .image_contrast {
   filter: contrast(180%);
 }
@@ -175,7 +185,7 @@ button {
   filter: grayscale(100%);
 }
 
-.image_filters {
+.image_multifilter {
   filter: contrast(120%) saturate(500%) hue-rotate(0.5turn);
 }
 
@@ -186,11 +196,42 @@ button {
 
 .card__paragraph {
   line-height: 1.17;
+  text-align: justify;
   font-variation-settings: "wght" var(--font-weight-regular, 400);
 }
 
 .card__paragraph:not(:last-child) {
   margin-block-end: 27px;
+}
+
+.paragraph_link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  text-wrap: nowrap;
+}
+
+.paragraph_links {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.card__link {
+  font-family: var(--font-family-titles);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  transition: text-shadow 0.3s, color 0.4s;
+}
+
+.card__link:hover,
+.card__link:focus,
+.card__link:focus-visible {
+  color: var(--background-color);
+  text-shadow: -1px 0 var(--text-color), 0 1px var(--text-color),
+    1px 0 var(--text-color), 0 -1px var(--text-color);
 }
 
 .card__buttons-block {

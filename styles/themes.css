@@ -1,55 +1,76 @@
 .page.theme-dark {
-  --text-color: #00cc14;
+  --text-color: #c677ff;
   --background-color: #000;
-  --hover-color: 0, 204, 20, 0.5;
-  --button-action-color: #00cc14;
+  --hover-color: 198, 119, 255, 0.5;
+  --button-action-color: #c677ff;
   --font-weight-regular: 465;
   --font-weight-bold: 785;
   --background-image: repeating-linear-gradient(
-    to right, #000, #000 2px,
-    transparent 2px, transparent 4px),
+      to right,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
     repeating-linear-gradient(
-    to bottom, #000, #000 2px,
-    transparent 2px, transparent 4px),
-    linear-gradient(
-    to bottom, #007f0c, #004306 );
-  --heart-contour-color: #00cc14;
+      to bottom,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #9505fd, #4d0382);
+  --heart-contour-color: #c677ff;
 }
 
 .page.theme-light {
-  --text-color: #000;
+  --text-color: #0e011c;
   --background-color: #fff;
-  --hover-color: 0, 0, 0, 0.5;
-  --button-action-color: #fff;
+  --hover-color: 14, 1, 28, 0.5;
+  --button-action-color: #f7efff;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --background-image: repeating-linear-gradient(
-    to right, #d3d3d3, #d3d3d3 2px,
-    transparent 2px, transparent 4px),
+      to right,
+      #f7efff,
+      #f7efff 2px,
+      transparent 2px,
+      transparent 4px
+    ),
     repeating-linear-gradient(
-    to bottom, #d3d3d3, #d3d3d3 2px,
-    transparent 2px, transparent 4px),
-    linear-gradient(
-    to bottom, #e7e7e7 0.01%, #1a1a1a );
-  --heart-contour-color: #000;
+      to bottom,
+      #f7efff,
+      #f7efff 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #f9f8fa 0.01%, #0e011c);
+  --heart-contour-color: #0e011c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #00cc14;
-    --background-color: #000;
-    --hover-color: 0, 204, 20, 0.5;
-    --button-action-color: #00cc14;
-    --font-weight-regular: 465;
-    --font-weight-bold: 785;
-    --background-image:  repeating-linear-gradient(
-      to right, #000, #000 2px,
-      transparent 2px, transparent 4px),
-      repeating-linear-gradient(
-      to bottom, #000, #000 2px,
-      transparent 2px, transparent 4px),
-      linear-gradient(
-      to bottom, #007f0c, #004306 );
-    --heart-contour-color: #00cc14;
+    --text-color: #c677ff;
+  --background-color: #000;
+  --hover-color: 198, 119, 255, 0.5;
+  --button-action-color: #c677ff;
+  --font-weight-regular: 465;
+  --font-weight-bold: 785;
+  --background-image: repeating-linear-gradient(
+      to right,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #9505fd, #4d0382);
+  --heart-contour-color: #c677ff;
   }
 }
